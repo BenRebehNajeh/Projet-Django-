@@ -1,0 +1,39 @@
+{% extends 'magasin/base.html' %}
+
+{% block content %}
+  <style>
+    .background-image {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('/static/images/e-commerce-background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(1px);
+    }
+    
+    .background-image p {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 23px;
+      color: black;
+      text-align: center;
+      width: 80%;
+      animation: fade-in 2s ease-in-out;
+    }
+    
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+  </style>
+
+  <div class="background-image">
+    <p>Bienvenue dans notre E-Commerce Shop 👐</p>
+  </div>
+  
+{% endblock %}

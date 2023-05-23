@@ -1,0 +1,46 @@
+{% extends "magasin/base.html" %}
+
+{% block content %}
+<style>
+.logout-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.logout-card {
+  width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-card h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.logout-card .login-link {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logout-card .login-link:hover {
+  color: #0056b3;
+}
+</style>
+
+<div class="logout-page">
+  <div class="logout-card">
+    <h2>Vous êtes déconnecté.</h2>
+    <a class="login-link" href="{% url 'login' %}">Se reconnecter</a>
+  </div>
+</div>
+{% endblock %}
